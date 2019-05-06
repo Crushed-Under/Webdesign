@@ -32,4 +32,20 @@
   padding: 14px 16px;
   text-decoration: none;
 }
+
+.wrapper .sidebar {
+  -ms-grid-column: 1;
+  grid-column: 1fr;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 12;
+  grid-row: 1fr / span 12fr;
+}
+
+.wrapper .sidebar .source .a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */
