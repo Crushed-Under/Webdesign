@@ -40,4 +40,19 @@
       }
     }
   }
+  .content{
+    grid-column: 2/ span 12;
+    grid-row: 2;
+    .topbox {
+    @media only screen and (max-width: 1024px) {
+    /* The image used */
+    background-image: url("\images\cleared-area.jpg")
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+      }
+    }
+  }
 }
