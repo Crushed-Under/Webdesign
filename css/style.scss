@@ -1,0 +1,43 @@
+.wrapper{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  .navbar{
+    grid-column: 1 / span 12;
+    grid-row: 1;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    li {
+      float: left;
+    
+    
+      a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+    }
+  }
+  .sidebar{
+    grid-column: 1;
+    grid-row: 2 /span 20;
+    background-color: ;
+    .bottombtn{
+      a{
+        display: block;
+        color: brown;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+    }
+  }
+}

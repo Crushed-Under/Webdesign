@@ -1,0 +1,54 @@
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: (1fr)[20];
+      grid-template-rows: repeat(20, 1fr);
+}
+
+.wrapper .navbar {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / span 12;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.wrapper .navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.wrapper .navbar li {
+  float: left;
+}
+
+.wrapper .navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.wrapper .sidebar {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 20;
+  grid-row: 2 /span 20;
+  background-color: aqua;
+}
+
+.wrapper .sidebar .bottombtn a {
+  display: block;
+  color: brown;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
