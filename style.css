@@ -35,13 +35,14 @@
 
 .wrapper .sidebar {
   -ms-grid-column: 1;
-  grid-column: 1fr;
-  -ms-grid-row: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
   -ms-grid-row-span: 12;
-  grid-row: 1fr / span 12fr;
+  grid-row: 2 / span 12;
+  background-color: #333;
 }
 
-.wrapper .sidebar .source .a {
+.wrapper .sidebar .sources a {
   display: block;
   color: white;
   text-align: center;

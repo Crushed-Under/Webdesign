@@ -26,10 +26,11 @@
     }
   }
   .sidebar{
-    grid-column: 1fr;
-    grid-row: 1fr / span 12fr; 
-    .source{
-      .a{
+    grid-column: 1;
+    grid-row: 2 / span 12; 
+    background-color: #333;
+    .sources{
+      a{
         display: block;
         color: white;
         text-align: center;
