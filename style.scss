@@ -1,4 +1,9 @@
-.header {
-    font-size: 16px;
-    background-color: aqua;
+/*wrapper defines grid for entire page*/
+.wrapper{
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+        .navbar{
+            grid-column:1 / span 12; 
+        }
 }
