@@ -1,7 +1,7 @@
 .wrapper{
   display:grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(20, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   .navbar{
     grid-column: 1 / span 12;
     grid-row: 1;
@@ -29,7 +29,7 @@
   .sidebar{
     grid-column: 1;
     grid-row: 2 /span 20;
-    background-color: ;
+    background-color: #333;
     .bottombtn{
       a{
         display: block;
@@ -42,17 +42,16 @@
   }
   .content{
     grid-column: 2/ span 12;
-    grid-row: 2;
+    grid-row: 2/ span 12;
     .topbox {
-    @media only screen and (max-width: 1024px) {
     /* The image used */
-    background-image: url("\images\cleared-area.jpg")
+    background-image: url("\Webdesign\images\cleared-area.jpg");
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-      }
+      
     }
   }
 }
