@@ -1,117 +1,202 @@
-.wrapper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 5.5% (1fr)[12];
-      grid-template-columns: 5.5% repeat(12, 1fr);
-  -ms-grid-rows: (4vw)[12];
-      grid-template-rows: repeat(12, 4vw);
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 5.5% (1fr)[12];
+        grid-template-columns: 5.5% repeat(12, 1fr);
+    -ms-grid-rows: (4vw)[12];
+        grid-template-rows: repeat(12, 4vw);
+  }
+  .wrapper .navbar {
+    background-attachment: fixed;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 13;
+    grid-column: 1 /  14;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .wrapper .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  .wrapper .navbar li {
+    float: right;
+  }
+  .wrapper .navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px 25px;
+    text-decoration: none;
+  }
+  .wrapper .sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 11;
+    grid-row: 2 / 13;
+    background-color: #333;
+    top: 0;
+  }
+  .wrapper .sidebar .bottombtn {
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+  }
+  .wrapper .sidebar .bottombtn a {
+    display: block;
+    color: brown;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .wrapper .content {
+    grid-column: span 24;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 11;
+    grid-row: 2/13;
+    position: relative;
+  }
+  .wrapper .content h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2.5vw;
+    font-weight: bolder;
+    width: 50%;
+    border: 10%;
+    padding: 10%;
+    padding-bottom: 0%;
+    border: 0%;
+  }
+  .wrapper .content p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1vw;
+    font-weight: normal;
+    width: 50%;
+    border: 10%;
+    padding: 10%;
+    padding-top: 0%;
+    border: 0%;
+  }
+  .wrapper .content .parralax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper .content .content-divider1 {
+    /* background image */
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 130, 170, 0)), to(rgba(204, 81, 9, 0.877))), url("/images/cross-roads.jpg");
+    background-image: linear-gradient(to left, rgba(0, 130, 170, 0), rgba(204, 81, 9, 0.877)), url("/images/cross-roads.jpg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.wrapper .navbar {
-  background-attachment: fixed;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 13;
-  grid-column: 1 /  14;
-  -ms-grid-row: 1;
-  grid-row: 1;
-}
-
-.wrapper .navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-.wrapper .navbar li {
-  float: right;
-}
-
-.wrapper .navbar li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 25px 25px;
-  text-decoration: none;
-}
-
-.wrapper .sidebar {
-  position: -webkit-sticky;
-  position: sticky;
-  -ms-grid-column: 1;
-  grid-column: 1;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 11;
-  grid-row: 2 / 13;
-  background-color: #333;
-  top: 0;
-}
-
-.wrapper .sidebar .top-container {
-  height: 90%;
-}
-
-.wrapper .sidebar .top-container .bottombtn {
-  height: 10%;
-  position: absolute;
-  bottom: 0;
-}
-
-.wrapper .sidebar .top-container .bottombtn a {
-  display: block;
-  color: brown;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.wrapper .content {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 12;
-  grid-column: 2/14;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 11;
-  grid-row: 2/13;
-  position: relative;
-}
-
-.wrapper .content .parralax {
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.wrapper .content .content-divider1 {
-  /* background image */
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 130, 170, 0)), to(rgba(204, 81, 9, 0.877))), url("/images/cross-roads.jpg");
-  background-image: linear-gradient(to left, rgba(0, 130, 170, 0), rgba(204, 81, 9, 0.877)), url("/images/cross-roads.jpg");
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.wrapper .content h1 {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 2.5vw;
-  font-weight: bolder;
-  width: 50%;
-  border: 10%;
-  padding: 10%;
-  padding-bottom: 0%;
-  border: 0%;
-}
-
-.wrapper .content p {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1vw;
-  font-weight: normal;
-  width: 50%;
-  border: 10%;
-  padding: 10%;
-  padding-top: 0%;
-  border: 0%;
+@media only screen and (min-width: 900px) {
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 5.5% (1fr)[12];
+        grid-template-columns: 5.5% repeat(12, 1fr);
+    -ms-grid-rows: (4vw)[12];
+        grid-template-rows: repeat(12, 4vw);
+  }
+  .wrapper .navbar {
+    background-attachment: fixed;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 13;
+    grid-column: 1 /  14;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .wrapper .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  .wrapper .navbar li {
+    float: right;
+  }
+  .wrapper .navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px 25px;
+    text-decoration: none;
+  }
+  .wrapper .sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 11;
+    grid-row: 2 / 13;
+    background-color: #333;
+    top: 0;
+  }
+  .wrapper .sidebar .bottombtn {
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+  }
+  .wrapper .sidebar .bottombtn a {
+    display: block;
+    color: brown;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .wrapper .content {
+    grid-column: span 24;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 11;
+    grid-row: 2/13;
+    position: relative;
+  }
+  .wrapper .content h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2.5vw;
+    font-weight: bolder;
+    width: 50%;
+    border: 10%;
+    padding: 10%;
+    padding-bottom: 0%;
+    border: 0%;
+  }
+  .wrapper .content p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1vw;
+    font-weight: normal;
+    width: 50%;
+    border: 10%;
+    padding: 10%;
+    padding-top: 0%;
+    border: 0%;
+  }
+  .wrapper .content .parralax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper .content .content-divider1 {
+    /* background image */
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 130, 170, 0)), to(rgba(204, 81, 9, 0.877))), url("/images/cross-roads.jpg");
+    background-image: linear-gradient(to left, rgba(0, 130, 170, 0), rgba(204, 81, 9, 0.877)), url("/images/cross-roads.jpg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
