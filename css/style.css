@@ -1,16 +1,20 @@
+body {
+  margin: 0;
+}
+
 .wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-  -ms-grid-rows: (1fr)[20];
-      grid-template-rows: repeat(20, 1fr);
+  -ms-grid-columns: 65px (1fr)[11];
+      grid-template-columns: 65px repeat(11, 1fr);
+  -ms-grid-rows: 50px;
+      grid-template-rows: 50px;
+  grid-auto-rows: 8vw;
+  grid-row-gap: 0;
 }
 
 .wrapper .navbar {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1 / span 12;
+  grid-column: span 12;
   -ms-grid-row: 1;
   grid-row: 1;
 }
@@ -24,7 +28,7 @@
 }
 
 .wrapper .navbar li {
-  float: left;
+  float: right;
 }
 
 .wrapper .navbar li a {
@@ -36,12 +40,18 @@
 }
 
 .wrapper .sidebar {
+  margin-top: -25.8px;
+  position: relative;
   -ms-grid-column: 1;
   grid-column: 1;
   -ms-grid-row: 2;
-  -ms-grid-row-span: 20;
-  grid-row: 2 /span 20;
-  background-color: aqua;
+  -ms-grid-row-span: 10;
+  grid-row: 2 /span 10;
+  background-color: #333;
+}
+
+.wrapper .sidebar .bottombtn {
+  position: absolute;
 }
 
 .wrapper .sidebar .bottombtn a {
@@ -50,5 +60,24 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+.wrapper .content {
+  display: block;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 12;
+  grid-column: 2/ span 12;
+  position: relative;
+}
+
+.wrapper .content .topbox {
+  top: 0;
+  position: static;
+  margin-top: -25.8px;
+  display: block;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */
